@@ -4,6 +4,7 @@ import { SkillsRoute } from '../modules/skills/skill.route';
 import { ProjectRoute } from '../modules/projects/project.route';
 import { CourseRoutes } from '../modules/courses/course.route';
 import { EducationRoutes } from '../modules/educations/education.route';
+import { ResumeRoutes } from '../modules/resume/resume.route';
 
 const router = Router();
 const routes = [
@@ -26,6 +27,10 @@ const routes = [
   {
     path: '/educations',
     route: EducationRoutes,
+  },
+  {
+    path: '/resumes',
+    route: ResumeRoutes,
   },
 ];
 routes.forEach((route) => router.use(route.path, route.route));
