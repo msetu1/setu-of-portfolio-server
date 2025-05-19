@@ -27,7 +27,7 @@ const getSingleProject = catchAsync(async (req, res) => {
   sendResponse(res, {
     statusCode: httpStatusCodes.OK,
     success: true,
-    message: 'Single Skill retrieved successfully!',
+    message: 'Single Project retrieved successfully!',
     data: result,
   });
 });
@@ -45,12 +45,12 @@ const updateProject = catchAsync(async (req, res) => {
 });
 
 const deleteProject = catchAsync(async (req, res) => {
-  const result = await ProjectService.deleteProject(req.params.id);
+  await ProjectService.deleteProject(req.params.id);
   sendResponse(res, {
     statusCode: httpStatusCodes.OK,
     success: true,
     message: 'Project deleted successfully!',
-    data: result,
+    data: [],
   });
 });
 
