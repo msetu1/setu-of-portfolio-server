@@ -9,7 +9,8 @@ const createProjectValidationSchema = z.object({
     .array(z.string())
     .min(1, 'At least one technology is required'),
   liveLink: z.string().url('Must be a valid URL').optional(),
-  githubLink: z.string().url('Must be a valid GitHub URL').optional(),
+  clientLink: z.string().url('Must be a valid Client GitHub URL').optional(),
+  serverLink: z.string().url('Must be a valid Server GitHub URL').optional(),
   thumbnail: z.string().url('Thumbnail must be a valid URL').optional(),
   isFeatured: z.boolean().optional(),
   isAvailable: z.boolean({ required_error: 'isAvailable is required' }),
@@ -27,7 +28,8 @@ const updateProjectValidationSchema = z.object({
     .min(1, 'At least one technology is required')
     .optional(),
   liveLink: z.string().url('Must be a valid URL').optional(),
-  githubLink: z.string().url('Must be a valid GitHub URL').optional(),
+  clientLink: z.string().url('Must be a valid Client GitHub URL').optional(),
+  serverLink: z.string().url('Must be a valid Server GitHub URL').optional(),
   thumbnail: z.string().url('Thumbnail must be a valid URL').optional(),
   isFeatured: z.boolean().optional(),
   isAvailable: z.boolean().optional(),

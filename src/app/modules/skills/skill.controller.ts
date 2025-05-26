@@ -45,7 +45,8 @@ const updateSkill = catchAsync(async (req, res) => {
 });
 
 const deleteSkill = catchAsync(async (req, res) => {
-  await SkillsService.deleteSkill(req.params.id);
+  const { id } = req.params;
+  await SkillsService.deleteSkill(id);
   sendResponse(res, {
     statusCode: httpStatusCodes.OK,
     success: true,

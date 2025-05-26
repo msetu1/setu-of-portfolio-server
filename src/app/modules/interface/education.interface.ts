@@ -1,9 +1,9 @@
 export interface IEducation {
+  institute: string;
   degree: string;
-  institution: string;
-  startDate: string; // ISO Date string
-  endDate?: string; // Optional, for ongoing
-  grade?: string;
+  status: 'Running' | 'Completed'; 
+  category:'Diploma'|'SSC'|'Courses';
+  duration: string;
   location?: string;
   description?: string;
   isDeleted?: boolean;

@@ -3,17 +3,31 @@ import { ISkill } from '../interface/skill.interface';
 
 const SkillSchema = new Schema<ISkill>(
   {
-    name: { type: String, required: true },
-    type: { type: String, enum: ['technical', 'soft'], required: true },
-    level: {
+    name: {
       type: String,
-      enum: ['beginner', 'intermediate', 'advanced', 'expert'],
-      default: 'beginner',
+      required: true,
     },
-    icon: { type: String }, // Image or icon URL
-    description: { type: String }, // Optional description
-    isAvailable: { type: Boolean, required: true },
-    isDeleted: { type: Boolean, default: false },
+    icon: {
+      type: String,
+      required: true,
+    },
+    category: {
+      type: String,
+      enum: ['Expertise', 'Comfortable', 'Familiar', 'Tools'],
+      required: true,
+    },
+    area: {
+      type: String,
+      required: true,
+    },
+    isAvailable: {
+      type: Boolean,
+      default: true,
+    },
+    isDeleted: {
+      type: Boolean,
+      default: false,
+    },
   },
   {
     timestamps: true,
