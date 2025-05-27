@@ -20,7 +20,7 @@ const educationSchema = new Schema<IEducation>(
     },
     category: {
       type: String,
-      enum: ['Diploma','SSC','Courses'],
+      enum: ['Diploma', 'SSC', 'Courses'],
       required: [true, 'Category is required'],
     },
     duration: {

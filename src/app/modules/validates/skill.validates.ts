@@ -1,5 +1,10 @@
 import { z } from 'zod';
-export const skillCategoryEnum = z.enum(['Expertise', 'Comfortable', 'Familiar', 'Tools']);
+export const skillCategoryEnum = z.enum([
+  'Expertise',
+  'Comfortable',
+  'Familiar',
+  'Tools',
+]);
 
 const createSkillSchema = z.object({
   name: z.string().min(1, 'Skill name is required'),
